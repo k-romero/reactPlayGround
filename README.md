@@ -237,9 +237,172 @@ const circle = {
     radius: 2,
 };
 
-const circleArea = ({radius}) =>
-    (PI * radius * radius).toFixed(2);
+const circleArea = ({radius}, {precision = 2}) =>
+    (PI * radius * radius).toFixed(precision);
 console.log(
     circleArea(circle)
+);
+```
+#### Template Strings
+The code below uses template strings which allows us to use the $sign syntax and reference outside variables, in addition we can have multi line strings.
+```javascript
+const html = `
+<div>
+${Math.random()}
+</div>
+`
+```
+#### Classes
+JS classes are a lot like Java classes. We can use inheritance, constructors, local variables and local functions.
+
+#### Async/Promises
+Both of the below examples use promises and do the same thing.
+```javascript
+const fetchData = () => {
+    fetch('https://api.github.com').then(resp => {
+        resp.json().then(data => {
+            console.log(data)
+        });
+    });
+};
+
+const fetchData = async () => {
+    const resp = await fetch('https://api.github.com');
+
+    const data = await resp.json();
+
+    console.log(data);
+};
+```
+
+#### Styling using JS syntax
+ We can achieve this by using object literals. Take note of the double curly braces and the camel casing! (I don't like this :/)
+```javascript
+class Card extends React.Component {
+  render(){
+    return (
+    <div className="github-profile" style={{ margin: '1rem'}}>
+      <img src="https://placehold.it/75" />
+        <div className="info" style={{display: 'inline-block', marginLeft: 10}}>
+          <div className="name" style={{ fontSize: '125%'}}>Name here...</div>
+          <div className="company">Company here...</div>
+        </div>
+    </div>
+    );
+  }
+}
+```
+#### Populating objects with data using props
+Below is an example of taking data, a class, and a function component to make a series of cards
+
+```javascript
+
+	const testData = [
+			{name: "Dan Abramov", avatar_url: "https://avatars0.githubusercontent.com/u/810438?v=4", company: "@facebook"},
+      {name: "Sophie Alpert", avatar_url: "https://avatars2.githubusercontent.com/u/6820?v=4", company: "Humu"},
+  		{name: "Sebastian Markbåge", avatar_url: "https://avatars2.githubusercontent.com/u/63648?v=4", company: "Facebook"},
+	];
+
+//function component
+const CardList = (props) => (
+  <div>
+      {testData.map(profile => <Card {...profile}/>)}
+  </div>
+);
+```
+```javascript
+//class component
+
+class Card extends React.Component {
+	render() {
+    const profile = this.props;
+  	return (
+    	<div className="github-profile">
+    	  <img src={profile.avatar_url} />
+        <div className="info">
+          <div className="name">{profile.name}</div>
+          <div className="company">{profile.company}</div>
+        </div>
+    	</div>
+    );
+  }
+}
+```
+The finalized code can be seen below where we remove the need for mock data and use githubs api to fetch data based on user input. Take note of async keyword when fetching calls. Also and more importantly, the separation of responsibility (though we could extract further).
+
+```javascript
+const CardList = (props) => (
+  <div>
+      {props.profiles.map(profile => <Card key={profile.id} {...profile}/>)}
+  </div>
+);
+```
+```javascript
+class Card extends React.Component {
+	render() {
+    const profile = this.props;
+  	return (
+    	<div className="github-profile">
+    	  <img src={profile.avatar_url} />
+        <div className="info">
+          <div className="name">{profile.name}</div>
+          <div className="company">{profile.company}</div>
+        </div>
+    	</div>
+    );
+  }
+}
+```
+```javascript
+class Form extends React.Component {
+  state = { userName: '' }
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const resp = await axios.get(`https://api.github.com/users/${this.state.userName}`)
+    this.props.onSubmit(resp.data);
+    this.setState({ userName: '' })
+  };
+  render() {
+    return (
+    <form onSubmit={this.handleSubmit}>
+      <input 
+        type="text" 
+        value={this.state.userName}
+        onChange={event => this.setState({ userName: event.target.value })}
+        placeholder="GitHub username" 
+        required/>
+        <button>Add Card</button>
+    </form>
+    
+    );
+  }
+}
+```
+```javascript
+class App extends React.Component {
+    state = {
+        profiles: [],
+    };
+    addNewProfile = (profileData) => {
+        this.setState(prevState=> ({
+            profiles: [...prevState.profiles, profileData],
+        }))
+    };
+
+render() {
+  	return (
+    	<div>
+    	  <div className="header">{this.props.title}</div>
+         <Form onSubmit={this.addNewProfile}/>
+        <CardList profiles={this.state.profiles}/>
+    	</div>
+    );
+  }	
+}
+```
+```javascript
+ReactDOM.render(
+	<App title="The GitHub Cards App" />,
+  mountNode,
 );
 ```
