@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 
-import UserCards from './cards_components/UserCards'
+import UserCards from './components/github_card/UserCards'
 
 function App() {
   return (
