@@ -159,3 +159,87 @@ ReactDOM.render(
   document.getElementById('mountNode'),
 );
 ```
+
+### Benefit of using React to create HTML elements
+In the code below, both the `render() & ReactDOM.render()` do the exact same thing except `React.DOM.render()` is smart enough to only update the `time` where as the `render()` updates the entire div.
+
+```javascript
+const render = () => {
+  document.getElementById('mountNode').innerHTML = `
+<div>
+  Hello HTML
+  <input />
+<pre>
+  ${(new Date).toLocaleTimeString()}
+</pre>
+
+</div>
+`;
+
+ReactDOM.render(
+  React.createElement(
+    "div",
+    null,
+    "Hello React",
+    React.createElement('input', null),
+    React.createElement('pre', null,(new Date).toLocaleTimeString()),
+  ),
+  document.getElementById('mountNode2'),
+);
+}
+
+setInterval(render, 1000);
+```
+------------------------
+## EcmaScript Review
+
+* Block scope is the same as Java -> { }
+* Use *let* and *const* instead over *var* 
+
+#### Arrow Functions
+
+all three of the below examples are valid
+
+```javascript
+const square1 = (a) => {
+    return a*a;
+};
+
+const square2 = (a) => a*a;
+
+const square3 = a => a8a;
+```
+
+#### Object Literals
+made up of key value pairs
+```javascript
+const obj = {
+    p1: 10,
+    p2: 20,
+    f1() {},
+    f2: () => {}
+};
+```
+#### Destructuring and Rest/Spread
+```javascript
+const PI = Math.PI;
+const E = Math.E;
+const SQRT2 = Math.SQRT2;
+```
+The code above can be destructured to the single line below
+```javascript
+const {PI, E, SQRT2} = Math;
+```
+Additionally we can destructure objects to grab the property we need (see below)
+```javascript
+const circle = {
+    label: 'circleX',
+    radius: 2,
+};
+
+const circleArea = ({radius}) =>
+    (PI * radius * radius).toFixed(2);
+console.log(
+    circleArea(circle)
+);
+```
