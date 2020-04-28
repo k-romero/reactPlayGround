@@ -8,14 +8,7 @@ function Navigation() {
   return (
     <div className="Navigation">
       <div>
-        <Navbar
-          inverse
-          fluid
-          collapseOnSelect
-          expand="lg"
-          bg="dark"
-          variant="dark"
-        >
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <LinkContainer to="/">
             <Navbar.Brand className="nav">
               <img
@@ -39,6 +32,9 @@ function Navigation() {
               </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/jokes">
+                <Nav.Link>Jokes</Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

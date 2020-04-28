@@ -7,6 +7,7 @@ import Projects from "./components/portfolio/Projects";
 import Contact from "./components/portfolio/Contact";
 import About from "./components/portfolio/About";
 import UserCards from "./components/github_card/UserCards";
+import Jokes from "./components/jokes/Jokes";
 
 import "./App.scss";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/usercards" component={UserCards} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
+        <Route path="/jokes" component={Jokes} />
       </div>
     </Router>
   );
