@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navigation from "./components/navigation/Navigation";
-import Home from "./components/portfolio/Home";
-import Projects from "./components/portfolio/Projects";
-import Contact from "./components/portfolio/Contact";
-import About from "./components/portfolio/About";
+import Home from "./components/portfolio/home/Home";
+import Projects from "./components/portfolio/projects/Projects";
+import Contact from "./components/portfolio/contact/Contact";
+import About from "./components/portfolio/about/About";
 import UserCards from "./components/github_card/UserCards";
 import Jokes from "./components/jokes/Jokes";
 

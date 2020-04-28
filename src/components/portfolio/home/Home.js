@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "./Header";
 
 function Home(props) {
   return (
     <div className="text-center">
-      <h1>Home</h1>
+      <Header />
     </div>
   );
 }
