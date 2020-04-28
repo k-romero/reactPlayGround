@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import Header from "../portfolio/header/Header";
+
 function Jokes() {
   useEffect(() => {
     fetchJokes();
@@ -17,14 +19,17 @@ function Jokes() {
   };
 
   return (
-    <div className="text-center">
-      <h1>Jokes</h1>
-      {jokes.map(joke => (
-        <div className="jokes" key={joke.id}>
-          <p className="jokes-setup">{joke.setup}</p>
-          <p className="jokes-punchline">{joke.punchline}</p>
-        </div>
-      ))}
+    <div>
+      <Header />
+      <div className="text-center">
+        <h1>Jokes</h1>
+        {jokes.map(joke => (
+          <div className="jokes" key={joke.id}>
+            <p className="jokes-setup">{joke.setup}</p>
+            <p className="jokes-punchline">{joke.punchline}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

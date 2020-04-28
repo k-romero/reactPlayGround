@@ -1,9 +1,13 @@
 import React from "react";
+import Header from "../header/Header";
 
 function Contact(props) {
   return (
-    <div className="text-center">
-      <h1>Contact</h1>
+    <div className="">
+      <Header />
+      <div className="aboutSection">
+        <h1>Contact</h1>
+      </div>
     </div>
   );
 }

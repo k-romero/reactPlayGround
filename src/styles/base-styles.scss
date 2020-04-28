@@ -7,3 +7,23 @@
 .text-center {
   text-align: center;
 }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem is (10px)
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  background-color: $color-grey-light-1;
+  padding: 0rem;
+}

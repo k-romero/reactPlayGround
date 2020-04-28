@@ -14,7 +14,7 @@ import "./App.scss";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app-container">
         <Navigation />
         <Route exact path="/" component={Home} />
         <Route path="/projects" component={Projects} />
