@@ -1,15 +1,27 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import './App.scss';
+import Navigation from "./components/navigation/Navigation";
+import Home from "./components/portfolio/Home";
+import Projects from "./components/portfolio/Projects";
+import Contact from "./components/portfolio/Contact";
+import About from "./components/portfolio/About";
+import UserCards from "./components/github_card/UserCards";
 
-import UserCards from './components/github_card/UserCards'
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-    <UserCards title="TheGitHubCardsApp" />
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Route exact path="/" component={Home} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/usercards" component={UserCards} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+      </div>
+    </Router>
   );
 }
-
 export default App;
