@@ -1,0 +1,34 @@
+.proj {
+  &-details {
+    &-container {
+      margin: 0 auto;
+      max-width: 60%;
+      background-color: $color-grey-light;
+      border-radius: 20px;
+      padding: 5% 0 1%;
+
+      &-inner {
+        margin: 0 auto;
+        max-width: 90%;
+        height: 90%;
+
+        & img {
+          max-width: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &-linkBack {
+      margin: 1% auto 0;
+      text-align: center;
+
+      &-link {
+        color: white;
+        text-decoration: none;
+        font-size: 3.4rem;
+      }
+    }
+  }
+}

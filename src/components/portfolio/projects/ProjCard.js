@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class ProjCards extends React.Component {
+export default class ProjCard extends React.Component {
   constructor(props) {
     super(props);
     this.wrapperRef = React.createRef();
@@ -15,25 +15,27 @@ export default class ProjCards extends React.Component {
     return (
       <div
         ref={this.wrapperRef}
-        className="section-about"
+        className="proj-card"
         onClick={() => this.handleClick()}
       >
         <div className="">
           <h2 className="u-margin-bottom-medium heading-secondary heading-secondary-light">
-            {this.props.cardHeading}
+            {this.props.heading}
           </h2>
         </div>
         <div className="my-row">
           <div className="col-1-of-2">
-            <h3 className="heading-tertiary u-margin-bottom-small">
-              {this.props.cardTitle}
-            </h3>
-            <p className="paragraph not-show">
-              {this.props.cardBody}
-              <a href={this.props.link} className="inline-link">
+            <h3 className="heading-tertiary">{this.props.subHeading}</h3>
+            <img
+              className=""
+              src={this.props.image}
+              alt="portfolio-items"
+            ></img>
+            <p className="paragraph">
+              {this.props.body}
+              <a href={`/projects/${this.props.link}`} className="inline-link">
                 {this.props.linkTitle}
               </a>
-              {this.props.cardBodyEnd}
             </p>
           </div>
         </div>

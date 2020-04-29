@@ -1,0 +1,27 @@
+.proj {
+  &-container {
+    width: 100%;
+    display: flex;
+  }
+
+  &-single {
+    max-width: 25%;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-card {
+    max-width: 100%;
+    background-color: $color-grey-light;
+    border-radius: 2rem;
+
+    &s {
+      display: grid;
+      columns: 2;
+    }
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}
