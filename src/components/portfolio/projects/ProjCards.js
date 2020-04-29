@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class InfoCard extends React.Component {
+export default class ProjCards extends React.Component {
   constructor(props) {
     super(props);
     this.wrapperRef = React.createRef();

@@ -26,4 +26,16 @@ body {
   position: relative;
   background-color: $color-grey-light-1;
   padding: 0rem;
+
+  height: 100vh;
+  max-width: 100vw;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.808),
+      rgba($color-primary-dark, 0.794)
+    ),
+    url(../../images/grid1.png);
+  background-repeat: repeat;
+  background-position: top;
+  position: relative;
 }

@@ -4,6 +4,7 @@
 @import "./styles/base/typography";
 @import "./styles/base/utilities";
 
-@import "./styles/components/nav.scss";
-@import "./styles/components/header.scss";
-@import "./styles/components/welcome.scss";
+@import "./styles/components/containers";
+@import "./styles/components/nav";
+@import "./styles/components/header";
+@import "./styles/components/welcome";

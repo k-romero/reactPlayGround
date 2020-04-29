@@ -1,29 +1,3 @@
-.app-container {
-  height: 100vh;
-  max-width: 100vw;
-  background-image: linear-gradient(
-      to right,
-      rgba($color-primary-light, 0.808),
-      rgba($color-primary-dark, 0.794)
-    ),
-    url(../../images/grid1.png);
-  background-repeat: repeat;
-  background-position: top;
-  position: relative;
-  &__logo-box {
-    position: absolute;
-    top: 6rem;
-    left: 6rem;
-  }
-
-  &__text-box {
-    position: absolute;
-    top: 20rem;
-    left: 6rem;
-    text-align: left;
-  }
-}
-
 svg {
   width: 150px;
   height: 150px;
