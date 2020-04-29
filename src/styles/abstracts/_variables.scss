@@ -12,12 +12,16 @@ $color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light: #b0b0b0;
+$color-grey-light-2: #c3c3c3;
+
+$color-grey-light-opacity: #f7f7f762;
 
 $color-grey-dark: #777;
-$color-grey-dark-2: #999;
+$color-grey-dark-2: rgb(87, 87, 87);
 $color-grey-dark-3: #333;
 $color-white: white;
 $color-black: #000;
+$color-dark-opacity: rgba(39, 39, 39, 0.52);
 
 $color-yellow: #ffd560;
 $color-yellow-2: #ffd560;
@@ -28,5 +32,12 @@ $color-logo-dark: #8c8c8c;
 $color-orange: #d8622f;
 $color-blue: #1b6161;
 
-//Fonts
+//Font
+$default-font-size: 1.8rem;
+$body-copy-font-size: 1.6rem;
 $primary-font: Helvetica, sans-serif;
+
+//Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

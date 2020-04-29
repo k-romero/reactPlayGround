@@ -6,7 +6,7 @@
       rgba($color-primary-light, 0.808),
       rgba($color-primary-dark, 0.794)
     ),
-    url(../images/grid1.png);
+    url(../../images/grid1.png);
   background-repeat: repeat;
   background-position: top;
   position: relative;
@@ -25,9 +25,10 @@
 }
 
 svg {
-  width: 175px;
-  height: 175px;
-  margin-left: 2%;
+  width: 150px;
+  height: 150px;
+  margin-left: 2.5%;
+  margin-top: 1%;
 
   & g {
     margin-top: 10px;

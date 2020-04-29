@@ -1,0 +1,21 @@
+.section-about {
+  background-color: $color-grey-light-opacity;
+  padding: 10rem 8rem;
+  max-width: 50%;
+  margin: 10% auto;
+  border-radius: 20px;
+  box-shadow: 12px 12px 1rem 1px $color-dark-opacity;
+}
+
+@media only screen and (max-width: 1200px) {
+  .section-about {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section-about {
+    max-width: 90%;
+    padding: 7rem 6rem;
+  }
+}

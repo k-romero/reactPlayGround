@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../header/Header";
+import Welcome from "./Welcome";
 
 function Home(props) {
   return (
     <div className="">
       <Header />
-      <div className="text-center"></div>
-      <h1>Home</h1>
+      <Welcome />
     </div>
   );
 }

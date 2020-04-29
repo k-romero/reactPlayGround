@@ -1,4 +1,9 @@
-@import "./styles/variables.scss";
-@import "./styles/nav.scss";
-@import "./styles/base-styles.scss";
-@import "./styles/header.scss";
+@import "./styles/abstracts/variables.scss";
+
+@import "./styles/base/base";
+@import "./styles/base/typography";
+@import "./styles/base/utilities";
+
+@import "./styles/components/nav.scss";
+@import "./styles/components/header.scss";
+@import "./styles/components/welcome.scss";
