@@ -92,4 +92,8 @@ body {
 .inline-link {
   color: $color-grey-light-2;
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: $color-yellow;
+  }
 }
