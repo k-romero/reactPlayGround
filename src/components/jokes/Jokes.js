@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Header from "../portfolio/header/Header";
+import InfoCard from "../portfolio/home/InfoCard";
 
 function Jokes() {
   useEffect(() => {
@@ -25,8 +26,7 @@ function Jokes() {
         <h1>Jokes</h1>
         {jokes.map(joke => (
           <div className="jokes" key={joke.id}>
-            <p className="jokes-setup">{joke.setup}</p>
-            <p className="jokes-punchline">{joke.punchline}</p>
+            <InfoCard cardTitle={joke.setup} cardBody={joke.punchline} />
           </div>
         ))}
       </div>
