@@ -15,7 +15,7 @@ export default class InfoCard extends React.Component {
     return (
       <div
         ref={this.wrapperRef}
-        className="section-about"
+        className="info-card"
         onClick={() => this.handleClick()}
       >
         <div className="">
@@ -23,8 +23,8 @@ export default class InfoCard extends React.Component {
             {this.props.cardHeading}
           </h2>
         </div>
-        <div className="my-row">
-          <div className="col-1-of-2">
+        <div className="">
+          <div className="">
             <h3 className="heading-tertiary u-margin-bottom-small">
               {this.props.cardTitle}
             </h3>

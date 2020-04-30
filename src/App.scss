@@ -3,10 +3,12 @@
 @import "./styles/base/base";
 @import "./styles/base/typography";
 @import "./styles/base/utilities";
+@import "./styles/layout/grid";
 
 @import "./styles/components/containers";
 @import "./styles/components/nav";
 @import "./styles/components/header";
-@import "./styles/components/welcome";
+@import "./styles/components/infocard";
 @import "./styles/components/projcard";
 @import "./styles/components/projdetails";
+@import "./styles/components/featureboxes";

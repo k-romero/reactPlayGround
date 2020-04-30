@@ -1,4 +1,4 @@
-.section-about {
+.info-card {
   // background-color: $color-grey-dark-3;
   padding: 10rem 8rem;
   max-width: 50%;
@@ -16,13 +16,13 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .section-about {
+  .info-card {
     max-width: 60%;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .section-about {
+  .info-card {
     max-width: 90%;
     padding: 7rem 6rem;
   }
