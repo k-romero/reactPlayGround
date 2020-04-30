@@ -12,6 +12,7 @@ const card1 = (
     body="This was a project that I did about something and something else and it was a good time and yea this is cool."
   />
 );
+
 const card2 = (
   <ProjCard
     heading="Proj2"
@@ -22,6 +23,7 @@ const card2 = (
     body="This was a project that I did about something and something else and it was a good time and yea this is cool."
   />
 );
+
 const card3 = (
   <ProjCard
     heading="Proj3"
@@ -32,6 +34,7 @@ const card3 = (
     body="This was a project that I did about something and something else and it was a good time and yea this is cool."
   />
 );
+
 const card4 = (
   <ProjCard
     heading="Proj4"
@@ -42,6 +45,7 @@ const card4 = (
     body="This was a project that I did about something and something else and it was a good time and yea this is cool."
   />
 );
+
 const card5 = (
   <ProjCard
     heading="Proj5"

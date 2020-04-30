@@ -8,7 +8,7 @@ export default class ProjCard extends React.Component {
 
   handleClick() {
     const wrapper = this.wrapperRef.current;
-    wrapper.classList.toggle("is-section-open");
+    wrapper.classList.toggle("proj-card-clicked");
   }
 
   render() {
@@ -19,12 +19,12 @@ export default class ProjCard extends React.Component {
         onClick={() => this.handleClick()}
       >
         <div className="">
-          <h2 className="u-margin-bottom-medium heading-secondary heading-secondary-light">
+          <h2 className="heading-secondary heading-secondary-light">
             {this.props.heading}
           </h2>
         </div>
-        <div className="my-row">
-          <div className="col-1-of-2">
+        <div className="">
+          <div className="">
             <h3 className="heading-tertiary">{this.props.subHeading}</h3>
             <img
               className=""

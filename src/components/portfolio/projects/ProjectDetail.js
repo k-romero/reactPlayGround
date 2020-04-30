@@ -17,7 +17,11 @@ const projectDetails1 = {
   Libero nunc consequat interdum varius sit. Sem integer vitae justo eget magna fermentum iaculis. 
   Facilisis sed odio morbi quis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. 
   Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.`,
-  image: "https://i.imgur.com/9Mfxvb3.png"
+  image: [
+    "https://i.imgur.com/9Mfxvb3.png",
+    "https://i.imgur.com/o4zlDd0.jpg",
+    "https://i.imgur.com/WqQZGnl.png"
+  ]
 };
 
 const projectDetails2 = {
@@ -34,7 +38,11 @@ const projectDetails2 = {
   Libero nunc consequat interdum varius sit. Sem integer vitae justo eget magna fermentum iaculis. 
   Facilisis sed odio morbi quis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. 
   Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.`,
-  image: "https://i.imgur.com/9Mfxvb3.png"
+  image: [
+    "https://i.imgur.com/9Mfxvb3.png",
+    "https://i.imgur.com/o4zlDd0.jpg",
+    "https://i.imgur.com/WqQZGnl.png"
+  ]
 };
 
 const projectDetails3 = {
@@ -51,7 +59,11 @@ const projectDetails3 = {
   Libero nunc consequat interdum varius sit. Sem integer vitae justo eget magna fermentum iaculis. 
   Facilisis sed odio morbi quis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. 
   Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.`,
-  image: "https://i.imgur.com/9Mfxvb3.png"
+  image: [
+    "https://i.imgur.com/9Mfxvb3.png",
+    "https://i.imgur.com/o4zlDd0.jpg",
+    "https://i.imgur.com/WqQZGnl.png"
+  ]
 };
 
 let projectDetails4 = {
@@ -68,7 +80,7 @@ let projectDetails4 = {
   Libero nunc consequat interdum varius sit. Sem integer vitae justo eget magna fermentum iaculis. 
   Facilisis sed odio morbi quis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. 
   Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.`,
-  image: "https://i.imgur.com/9Mfxvb3.png"
+  image: ["https://i.imgur.com/9Mfxvb3.png"]
 };
 
 let projectDetails5 = {
@@ -85,7 +97,11 @@ let projectDetails5 = {
   Libero nunc consequat interdum varius sit. Sem integer vitae justo eget magna fermentum iaculis. 
   Facilisis sed odio morbi quis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. 
   Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.`,
-  image: "https://i.imgur.com/9Mfxvb3.png"
+  image: [
+    "https://i.imgur.com/9Mfxvb3.png",
+    "https://i.imgur.com/o4zlDd0.jpg",
+    "https://i.imgur.com/WqQZGnl.png"
+  ]
 };
 
 let projDeets = {};
@@ -110,16 +126,24 @@ function ProjectDetail({ match }) {
     console.log(projDeets);
   }
 
+  const images = projDeets.image.map((single, index) => (
+    <img
+      src={single}
+      alt="project details"
+      key={index}
+      className="u-margin-bottom-small"
+    ></img>
+  ));
+
   return (
     <div className="">
       <Header />
-      <div className="proj-details-container u-margin-bottom-big">
+      <div className="proj-details-container">
         <div className="proj-details-container-inner">
           <h1 className="heading-primary heading-primary--main">
             {projDeets.title}
           </h1>
           <p className="paragraph">{projDeets.body}</p>
-          <img src={projDeets.image} alt="project details"></img>
         </div>
         <div className="proj-details-linkBack">
           <Link className="proj-details-linkBack-link" to="/projects">
@@ -127,6 +151,7 @@ function ProjectDetail({ match }) {
           </Link>
         </div>
       </div>
+      <div className="proj-details-images">{images}</div>
     </div>
   );
 }

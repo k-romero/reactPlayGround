@@ -3,8 +3,6 @@
     &-container {
       margin: 0 auto;
       max-width: 60%;
-      background-color: $color-grey-light;
-      border-radius: 20px;
       padding: 5% 0 1%;
 
       &-inner {
@@ -12,11 +10,20 @@
         max-width: 90%;
         height: 90%;
 
-        & img {
-          max-width: 100%;
-          border-radius: 20px;
-          overflow: hidden;
+        & p {
+          color: $color-white;
         }
+      }
+    }
+
+    &-images {
+      max-width: 54%;
+      margin: 0 auto;
+
+      & img {
+        max-width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
       }
     }
 
@@ -25,9 +32,14 @@
       text-align: center;
 
       &-link {
-        color: white;
+        color: $color-white;
         text-decoration: none;
-        font-size: 3.4rem;
+        font-size: 2rem;
+
+        &:hover {
+          color: $color-grey-dark;
+          text-decoration: none;
+        }
       }
     }
   }
