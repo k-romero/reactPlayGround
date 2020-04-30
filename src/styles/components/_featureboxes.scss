@@ -21,3 +21,10 @@
     box-shadow: 12px 12px 1rem 1px $color-yellow;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .feature-box {
+    height: 300px;
+    padding: 1.7rem;
+  }
+}
