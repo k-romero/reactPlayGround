@@ -19,7 +19,7 @@ export default class InfoCard extends React.Component {
         onClick={() => this.handleClick()}
       >
         <div className="">
-          <h2 className="u-margin-bottom-medium heading-secondary heading-secondary-light">
+          <h2 className="u-margin-bottom-medium heading-secondary-alt">
             {this.props.cardHeading}
           </h2>
         </div>
