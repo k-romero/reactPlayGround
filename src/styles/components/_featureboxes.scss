@@ -15,10 +15,17 @@
     display: inline-block;
   }
 
+  &__text {
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+
   &:hover {
-    color: $color-yellow !important;
+    color: $color-grey-light !important;
     transform: translateY(-1.5rem) scale(1.03);
-    box-shadow: 12px 12px 1rem 1px $color-yellow;
+    box-shadow: 12px 12px 1rem 1px $color-grey-light;
   }
 }
 
