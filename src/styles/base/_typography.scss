@@ -76,13 +76,27 @@ body {
 .heading-tertiary {
   font-size: 2rem;
   font-weight: 700;
-  color: $color-grey-dark-2;
+  color: $color-grey-dark-3;
   text-transform: uppercase;
+}
+
+.heading-secondary-alt {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  color: $color-grey-dark-3;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .paragraph {
   font-size: $default-font-size;
-  color: $color-grey-dark-2;
+  color: $color-grey-dark-3;
 
   &:not(:last-child) {
     margin-bottom: 3rem;

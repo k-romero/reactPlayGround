@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../header/Header";
 import InfoCard from "./InfoCard";
+import FeatureBoxes from "./FeatureBoxes";
 
 function Home(props) {
   const cardHeading = "Kevin A. Romero";
@@ -28,6 +29,7 @@ function Home(props) {
         link={link}
         cardBodyEnd={cardBodyEnd}
       />
+      <FeatureBoxes />
     </div>
   );
 }

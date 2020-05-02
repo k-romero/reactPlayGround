@@ -1,0 +1,30 @@
+.feature-box {
+  height: 350px;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: $color-grey-dark-3;
+  border-radius: 10px;
+  border: 4px solid $color-grey-dark-3;
+  box-shadow: 12px 12px 1rem 1px $color-dark-opacity;
+  transition: transform 0.3s;
+
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  &:hover {
+    color: $color-yellow !important;
+    transform: translateY(-1.5rem) scale(1.03);
+    box-shadow: 12px 12px 1rem 1px $color-yellow;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .feature-box {
+    height: 300px;
+    padding: 1.7rem;
+  }
+}
