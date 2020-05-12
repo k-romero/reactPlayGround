@@ -1,5 +1,5 @@
 .feature-box {
-  height: 350px;
+  min-height: 350px;
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
@@ -29,9 +29,9 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .feature-box {
-    height: 300px;
+    min-height: 300px;
     padding: 1.7rem;
   }
 }
