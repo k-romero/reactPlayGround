@@ -69,6 +69,7 @@ function Projects(props) {
   return (
     <div className="proj">
       <Header />
+
       <div className="proj-container">{cardList}</div>
     </div>
   );

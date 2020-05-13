@@ -19,24 +19,15 @@ export default class ProjCard extends React.Component {
         onClick={() => this.handleClick()}
       >
         <div className="">
-          <div className="">
-            <img
-              className=""
-              src={this.props.image}
-              alt="portfolio-items"
-            ></img>
-            <div className="proj-card-deets">
-              <h3 className="heading-tertiary">{this.props.subHeading}</h3>
-              <p className="paragraph">
-                {this.props.body}
-                <a
-                  href={`/projects/${this.props.link}`}
-                  className="inline-link"
-                >
-                  {this.props.linkTitle}
-                </a>
-              </p>
-            </div>
+          <img className="" src={this.props.image} alt="portfolio-items"></img>
+          <div className="proj-card-deets">
+            <h3 className="heading-tertiary">{this.props.subHeading}</h3>
+            <p className="paragraph">
+              {this.props.body}
+              <a href={`/projects/${this.props.link}`} className="inline-link">
+                {this.props.linkTitle}
+              </a>
+            </p>
           </div>
         </div>
       </div>
