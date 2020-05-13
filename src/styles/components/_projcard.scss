@@ -8,7 +8,7 @@
   }
 
   &-single {
-    max-width: 30%;
+    max-width: 40%;
     padding: 0;
     margin: 0;
   }
@@ -20,11 +20,12 @@
     padding: 0 0 10px;
     margin: 20px;
     overflow: hidden;
+    background-color: dimgrey;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     & img {
       max-width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     &-deets {
