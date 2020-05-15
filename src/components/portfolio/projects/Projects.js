@@ -5,7 +5,7 @@ import ProjCard from "./ProjCard";
 const card1 = (
   <ProjCard
     heading="Proj1"
-    subHeading="This is my proj1"
+    subHeading="Full stack video hosting app"
     image="https://i.imgur.com/9Mfxvb3.png"
     linkTitle="View More"
     link="1"
@@ -16,7 +16,7 @@ const card1 = (
 const card2 = (
   <ProjCard
     heading="Proj2"
-    subHeading="This is my proj2"
+    subHeading="Command line casino games"
     image="https://i.imgur.com/9Mfxvb3.png"
     linkTitle="View More"
     link="2"
@@ -49,7 +49,7 @@ const card4 = (
 const card5 = (
   <ProjCard
     heading="Proj5"
-    subHeading="This is my proj5"
+    subHeading="Old design projects"
     image="https://i.imgur.com/9Mfxvb3.png"
     linkTitle="View More"
     link="5"
@@ -57,7 +57,18 @@ const card5 = (
   />
 );
 
-const cards = [card1, card2, card3, card4, card5];
+const card6 = (
+  <ProjCard
+    heading="Proj5"
+    subHeading="Photos"
+    image="https://i.imgur.com/9Mfxvb3.png"
+    linkTitle="View More"
+    link="5"
+    body="This was a project that I did about something and something else and it was a good time and yea this is cool."
+  />
+);
+
+const cards = [card1, card2, card3, card4, card5, card6];
 
 const cardList = cards.map((card, index) => (
   <div className="proj-single" key={index}>
