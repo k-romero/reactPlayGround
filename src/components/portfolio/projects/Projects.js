@@ -6,7 +6,7 @@ const card1 = (
   <ProjCard
     heading="Proj1"
     subHeading="Full stack video hosting app"
-    image="https://i.imgur.com/9Mfxvb3.png"
+    image="https://i.imgur.com/cL7QIm7.png"
     linkTitle="View More"
     link="1"
     body="This was a project that I did about something and something else and it was a good time and yea this is cool."
